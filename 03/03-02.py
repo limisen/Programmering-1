@@ -4,4 +4,8 @@ basen = int(basen)
 höjden = input("Ge mig ett tal för höjden på en triangel: ")
 höjden = int(höjden)
 
-print = (basen * höjden /2)
+print(höjden)
+print(basen)
+
+area = (höjden * basen /2)
+print(area)
