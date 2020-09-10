@@ -1,11 +1,8 @@
-basen = input("Ge mig ett tal för basen på en triangel: ")
+basen = input("Ange basen: ")
 basen = int(basen)
 
-höjden = input("Ge mig ett tal för höjden på en triangel: ")
+höjden = input("Ange höjden: ")
 höjden = int(höjden)
 
-print(höjden)
-print(basen)
-
 area = (höjden * basen /2)
-print(area)
+print("Arean på triangeln är {0}".format(area))

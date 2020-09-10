@@ -1,13 +1,17 @@
 
-tal1 = input("Ge mig ett tal: ")
-tal1=int(tal1)
+tal1 = input("Ange tal#1: ")
+tal1=float(tal1)
 
-tal2 = input("Ge mig ett till tal: ")
-tal2 =int(tal2)
+tal2 = input("Ange tal#2: ")
+tal2 =float(tal2)
 
-tal3 = input("Ge mig ännu ett tal: ")
-tal3 =int(tal3)
+tal3 = input("Ange tal#3: ")
+tal3 =float(tal3)
 
 summa = (tal1 + tal2 + tal3)
-print(summa)
 
+print("   {0:<4.2f}".format(tal1))
+print("   {0:<4.2f}".format(tal2))
+print("+  {0:<4.2f}".format(tal3))
+print("----------")
+print(summa)
