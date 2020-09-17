@@ -13,8 +13,8 @@ tal3 =float(tal3)
 summa = (tal1 + tal2 + tal3)
 
 #Centrerar tal#1-3 så att de ser fint ut
-print("     {0:<4.2f}".format(tal1))
-print("     {0:<4.2f}".format(tal2))
-print("+    {0:<4.2f}".format(tal3))
-print("========")
-print(summa)
+print("     {0:>4.0f}".format(tal1))
+print("     {0:>4.0f}".format(tal2))
+print("+    {0:>4.0f}".format(tal3))
+print("=========")
+print("     {0:0.0f}".format(summa))
