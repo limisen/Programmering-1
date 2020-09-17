@@ -1,7 +1,14 @@
 #Skriv ett program som adderar två variablers heltal i en tredje och sedan skriver ut summan. Kontrollera sedan även vad som händer om den ena variabeln har ett heltal och den andra har ett flyttal.
 
-tal1 = range(10)
+#Variabler
+tal1 = 65
+tal2 = 32
+#Variablernas summa
+summan = (tal1 + tal2)
 
-tal2 = range(0,10)
+print(summan)
 
-print(tal1 + tal2)
+#kontroll om ena variabeln skulle ha varit ett flyttal
+float(tal2)
+
+print(summan, "om den enna var ett flyttal")
