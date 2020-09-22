@@ -13,4 +13,6 @@ Bmi = (vikt/(längd**2))
 print("Vikt:",vikt)
 print("Längd:",längd)
 print("BMI={0:4.2f}".format(Bmi))
-print(Bmi)
+
+
+print("Raw output:",Bmi)
