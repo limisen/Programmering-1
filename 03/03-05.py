@@ -1,21 +1,24 @@
 #Angivning av pris och tank
 volym= input("Ange tankad volym: ")
-float(volym)
+volym = float(volym)
 
 prisLiter = input("ange priset/liter: ")
-float(prisLiter)
+prisLiter = float(prisLiter)
+
 #Uträkning
 
-
+betala = (volym * prisLiter)
+volym = round(volym)
+prisLiter = round(prisLiter, 2)
+betala = round(betala, 2)
 
 #KVITTOT!
-print("+------------------------------+")
-print("|        {:^} KVITTO     |".format(""))
-print("|        {:12.2f} Tankad volym    |".format(""))
-print("|        {:} Pris per liter   |".format(""))
-print("|        {:} Betalat kronor   |".format(""))
-print("|        {:}    |".format(""))
-print("|        {:}    |".format(""))
-print("|        {:}    |".format(""))
-print("|        {:}    |".format(""))
-print("+------------------------------+")
+print("+---------------------------------+")
+print("|   {:^}                        |".format("TANKAT"))
+print("|   {:<} {:>10.2f}{:<}  |".format("Tankad volym", volym,"liter"))
+print("|   {:<} {:>10.2f}{:<}   |".format("Pris per liter", prisLiter, "kr"))
+print("|   {:<} {:>10.2f}{:<}   |".format("Betala kronor", betala, "kr"))
+print("|                                 |")
+print("|   {:<}          |".format("Tack för besöket och"))
+print("|   {:<}               |".format("välkommen åter!"))
+print("+---------------------------------+")
