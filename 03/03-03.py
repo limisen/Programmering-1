@@ -7,4 +7,4 @@ extrapris = ordPris * 0.85
 int(extrapris)
 
 #utskrift på vad som ska betalas 
-print("Pris med rabatt: {0} kr".format(extrapris))
+print("Pris med rabatt: {:1.2f}kr".format(extrapris))

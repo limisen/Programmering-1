@@ -7,11 +7,11 @@ ordPris = float(ordPris)
 rabatt = float(rabatt)
 
 #Uträkning
-rabatt = (100 - rabatt)
-rabatt2 = (rabatt * 0.01)
-extrapris = (ordPris * rabatt2)
+rabatt = float(100 - rabatt)
+rabatt2 = float(rabatt * 0.01)
+extrapris = float(ordPris * rabatt2)
 
 #Int:ar så att det kan användas i text strängen
 float(extrapris)
 
-print("Pris med rabatt: {}kr".format(extrapris))
+print("Pris med rabatt: {:1.2f}kr".format(extrapris))
