@@ -1,4 +1,8 @@
 isum = int(input("Ange stop-värde: "))
 
-for i in range(1, isum):
-    print(1 + i)
+num = 0
+
+for i in range(1, (isum+1)):
+    num = num + (i)
+
+print(num)
