@@ -1,5 +1,5 @@
-x = int(input("Ge mig ett tal: "))
-z = int(input("Ge mig ännu ett tal: "))
+x = int(input("Ange tal 1: "))
+z = int(input("Ange tal 2: "))
 
 if x > z:
     print(x)
