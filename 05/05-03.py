@@ -1,5 +1,5 @@
-Nr = int(input("Ge mig ett start värde: "))
-Nr2 = int(input("Ge mig ett stop värde: "))
+Nr = int(input("Ange värde: "))
+Nr2 = int(input("Ange värde: "))
 
 for i in range(Nr, Nr2+1, 2):
     print(i)
