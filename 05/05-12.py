@@ -10,4 +10,4 @@ for i in range(1,2018):
 int(Pengar)
 
 
-print("{0}kr med 2% ränta i 2017 år blir {1:1f}kr".format(1, Pengar_efter_ränta))
+print("{0}kr med 2% ränta i 2017 år blir {1:1.0f}kr".format(1, Pengar_efter_ränta))

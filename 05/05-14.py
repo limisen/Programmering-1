@@ -12,4 +12,4 @@ while LÖSEN != password:
         print("Lösenord OK!")
         exit
     LÖSEN = input("Ange lösenord (Enter avbryter): ")
-print(Lösenord OK!)
+print("Lösenord OK!")
