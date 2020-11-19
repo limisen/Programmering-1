@@ -4,6 +4,10 @@ Pengar = 1
 ränta = 1.02
 Pengar_efter_ränta = (Pengar * ränta)
 
+for i in range(1,2018):
+    Pengar_efter_ränta = (Pengar * ränta)
+    Pengar = Pengar_efter_ränta
+int(Pengar)
 
 
-print("{0} med {1} ränta i 2017 år blir {2:1f}kr".format(Pengar, ränta, Pengar_efter_ränta))
+print("{0}kr med 2% ränta i 2017 år blir {1:1f}kr".format(1, Pengar_efter_ränta))

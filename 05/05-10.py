@@ -1,5 +1,5 @@
-int(input("Ange högsta temperaturen: "))
-int(input("Ange lägsta temperaturen: "))
+start = int(input("Ange högsta temperaturen: "))
+stop = int(input("Ange lägsta temperaturen: "))
 
 
 farenheit = 32 + celsius * 9/5
