@@ -15,3 +15,5 @@ while q != 1:
             print((Star*X).center(Rows))
             X -= 1
     q += 1
+
+#Nära men ej klar....
