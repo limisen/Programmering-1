@@ -4,12 +4,11 @@ LÖSEN = input("Ange lösenord (Enter avbryter): ")
 while LÖSEN != password:
     if LÖSEN == " " or LÖSEN == "":
         print("Inloggning avbruten")
-        exit
+        exit()
     elif LÖSEN != password:
         print("Felaktigt lösenord")
-        exit
     elif LÖSEN == password:
         print("Lösenord OK!")
-        exit
+        exit()
     LÖSEN = input("Ange lösenord (Enter avbryter): ")
 print("Lösenord OK!")
