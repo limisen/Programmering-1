@@ -18,4 +18,4 @@ if text_2[i] in text_2 == " ":
 elif text_2[i] in text_2 != " ":
     print(text_1, text_2[i:len(text)], sep="\n")
 
-#Jag kan del på texten men det går inte att säkerst göra så text_2 inte börjar med " "
+#Jag kan dela på texten men det går inte att säkerst göra så text_2 inte börjar med " "
