@@ -1,7 +1,8 @@
 amount = int(input("Ange tal du vill mata in: "))
-number = []
 
-for i in range(amount):
-    amount = float(input("Ange tal " + str(i+1) + " : "))
+tal = []
+for i in range(1,amount+1):
+    tal.append(float(input("Ange tal " + str(i) + ": ")))
 
-print(", ".join(str(round())))
+for x in tal:
+    print("{0:>0.2f}".format(x), end=", ")
