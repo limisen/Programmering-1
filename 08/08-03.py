@@ -4,10 +4,11 @@ tal = []
 for i in range(1,amount+1):
     tal.append(float(input("Ange tal " + str(i) + ": ")))
 
-last_item = tal.pop(-1)
+x = 1
+x = int(x)
 
 for x in tal:
-    print("{0:>0.2f}".format(x), end=", ")
-print("{0:>0.2f}".format(last_item))
+    y = tal[x] + tal[x-1]
+    print(y)
 
-#Klar!
+#Inte klar!
