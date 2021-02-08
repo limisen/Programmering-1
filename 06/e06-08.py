@@ -11,7 +11,6 @@ text_2 = text[split:len(text)]
 
 i = 0
 
-
 if text_2[i] in text_2 == " ":
     i += 1
     #print(text_2[i])
