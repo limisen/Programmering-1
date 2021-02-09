@@ -21,3 +21,4 @@ print('Att betala: {0}kr'.format(pris))
 bruttopris = 1550.66
 pris = nettopris(bruttopris)
 print('Att betala: {0}kr'.format(pris))
+#klar!
