@@ -1,8 +1,7 @@
 import math 
 
-def x:
-    float(input("Ange en cirkels area: "))
-    math. 
+def radie(x):
+    
 
 areans_radie = radie(55)
 print('Kod saknas här')
