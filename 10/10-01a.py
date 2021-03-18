@@ -13,6 +13,7 @@ def lottodragning():
         dragning.append(nr)
         lot.remove(nr)
         shuffle(lot)
+    dragning = sorted(dragning)
 
     return dragning
 
