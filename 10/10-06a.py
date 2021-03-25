@@ -8,9 +8,10 @@ def tärnings_kast():
     kast_för_tärning2 = []
 
     for i in range(10):
-        kast_för_tärning1.append(randrange(2,12))
-        kast_för_tärning2.append(randrange(2,12))
-        resultat.insert(((kast_för_tärning1[i]+ kast_för_tärning2[i]), ))
+        kast_för_tärning1.append(randrange(1,6))
+        kast_för_tärning2.append(randrange(1,6))
+        resultat.append[(kast_för_tärning1[i]+ kast_för_tärning2[i])]
         print(resultat, kast_för_tärning1, kast_för_tärning2)
 
 print(tärnings_kast())
+#Ej klar!

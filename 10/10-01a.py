@@ -19,3 +19,4 @@ def lottodragning():
 
 print('Dragning 1:', lottodragning())
 print('Dragning 2:', lottodragning())
+#klar!

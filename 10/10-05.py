@@ -1,12 +1,20 @@
-from random import _sqrt
+from random import _sqrt,random
 
+def pi_calculator():
+    """ Räknar ut pi genom att först slumpa fram 2 kordinater parvis för att sedan tafram sqrt av (x*x + y*y) och kolla om det är mindre än 1. Är det det så ökar within med 1. 
+    Detta görs 10 miljoner gånger. """
 
-Ange antal beräkningar till 10000000
-Ange innanför till 0
-Skriv ut Beräknar pi...
-Kör en loop för antalet beräkningar
-....Slumpa fram ett tal för x
-....Slumpa fram ett tal för y
-....Använd given kod i boken, if sqrt(xx + yy) < 1: Om det är sant, öka innanför med 1
-Räkna ut pi, pi = 4 * innanför/antal
-Skriv ut värdet med tre decimaler
+    within = 0
+    print("Calculating pi...")
+    for i in range(1,10000000):
+        x = random()
+        y = random()
+        if _sqrt(x*x + y*y) < 1:
+            within +=1
+        
+        pi = 4 * within/i
+
+    print("Pi är ungefär {0:.3f}".format(pi))
+
+print(pi_calculator())
+#klar!
