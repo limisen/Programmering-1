@@ -2,7 +2,7 @@ from random import sample
 
 def listig(x):
     """ Slumpar angivet antal tal i intervallet 1-1000 och sedan beräknar största, minsta och medelvärdet för att sedan skriva ut det """
-    default_list = sample([i for i in range(1,1000)], x)
+    default_list = sample([i for i in range(1,1000+1)], x)
     
     sorted_list = sorted(default_list)
     lowest = min(sorted_list)
