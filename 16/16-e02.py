@@ -1,11 +1,15 @@
 pannkaka = {
-    'vetemjöl'  : '2 1/2 dl',
-    'salt'      : '1/2 tsk',
-    'mjölk'     : '6 dl',
-    'ägg'       : '3'
+    'vetemjöl': '2 1/2 dl',
+    'salt': '1/2 tsk',
+    'mjölk': '6 dl',
+    'ägg': '3'
 }
-print(str(pannkaka.values()))
-print("-------------------")
-print(str(pannkaka.keys()))
-print("-------------------")
-print(str(pannkaka.items()))
+
+for values in pannkaka:
+    print(values)
+print("----------------")
+for keys in pannkaka:
+    print(keys)
+print("----------------")
+for keys, values in pannkaka.items():
+    print(keys, values, sep=": ")
