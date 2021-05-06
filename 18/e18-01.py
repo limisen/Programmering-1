@@ -1,16 +1,13 @@
-def readme(x):
+def readme(filepath):
     try:
-        path = "." + x
-        f = open(path, "r", encoding="UTF-8")
+        f = open(filepath, "r", encoding="UTF-8")
         text = f.read()
         f.close()
     except FileNotFoundError:
-        text = ("Eror 404: File was not located, File may not exist or you may not have the necessary permissions.")
+        text = ("Filen kan inte öppnas")
     finally:
         print(text,"\n---------------------------")
 
+readme('18\e18.txt')  # Filen finns
 
-
-readme('e18.txt')  # Filen finns
-
-readme('e18-error.txt')  # Filen finns ej
+readme('18\e18-error.txt')  # Filen finns ej
