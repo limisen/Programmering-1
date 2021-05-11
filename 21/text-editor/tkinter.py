@@ -7,7 +7,7 @@ nuvarandefil = 'no file'
 
 root = tk.Tk()
 root.title('noootpad')
-root.geometry(800*400)
+root.geometry('800x400')
 root.resizable(False, False)
 
 textruta = ScrolledText(
@@ -84,13 +84,14 @@ def saveas():
         savefile()
 
 main_menu = tk.Menu()
-root.config(menu=main_menu, tearoff=False)
-main_menu.add_cascade(lable='File', menu=filen_menu)
+root.config(menu=main_menu)
+file_menu = tk.Menu(main_menu, tearoff=False)
+main_menu.add_cascade(label='File', menu=file_menu)
 
-file_menu.add_command(lable='New')
-file_menu.add_command(lable='Open')
-file_menu.add_command(lable='Save')
-file_menu.add_command(lable='Save As')
-file_menu.add_command(lable='Exit', command=root.destroy)
+file_menu.add_command(label='New')
+file_menu.add_command(label='Open')
+file_menu.add_command(label='Save')
+file_menu.add_command(label='Save As')
+file_menu.add_command(label='Exit', command=root.destroy)
 
 root.mainloop()
