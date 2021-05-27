@@ -1,37 +1,24 @@
 import tkinter as tk
+from tkinter.constants import END
 from tkinter.scrolledtext import *
 from tkinter.filedialog import *
 from tkinter.messagebox import *
 
-nuvarandefil = 'no file'
-
-root = tk.Tk()
-root.title('noootpad')
-root.geometry('800x400')
-root.resizable(False, False)
-
-textruta = ScrolledText(
-    root,
-    wrap=tk.WORD,
-    font=("Times New Roman", 15),
-    undo=True
-)
-textruta.pack()
+nuvarandefil='no file'
 
 def new_file():
-    """ Creates" a new file """
+    """ "Creates" a new file """
     global nuvarandefil
-
     textruta.delete(1.0, tk.END)
     nuvarandefil = 'no file'
 
-
 def open_file():
+    """ körs när man klickar på open """
     global nuvarandefil
 
     filnamn = tk.filedialog.askopenfilename(
-        filetype=(
-            ('Textfile', '*.txt'),
+        filetypes =(
+            ('Textfiler', '*.txt'),
             ('html-filer', '*.html'),
             ('Alla filer', '*.*')
         )
@@ -42,7 +29,7 @@ def open_file():
             rader = fil.read()
             nuvarandefil = filnamn
         except:
-            tk.messagebox.showerror('Filfel', 'kunde inte öppna filen')
+            tk.massagebox.showerror('Filfel', 'Kunde inte öppna fil')
         else:
             textruta.delete(1.0, tk.END)
             textruta.insert(1.0, rader)
@@ -54,7 +41,9 @@ def open_file():
 
 def savefile():
     global nuvarandefil
+
     filnamn = nuvarandefil
+    
     rader = textruta.get(1.0, tk.END)
 
     if filnamn != 'no file':
@@ -62,9 +51,9 @@ def savefile():
             fil = open(filnamn, 'w', encoding='utf-8')
             fil.write(rader)
         except:
-            tk.messagebox.showerror('Filefel', 'kunde inte öppna filen')
+            tk.massagebox.showerror('Filfel', 'Kunde inte spata fil')
         else:
-            file.close()
+            fil.close()
     else:
         saveas()
 
@@ -72,26 +61,40 @@ def saveas():
     global nuvarandefil
 
     filnamn = tk.filedialog.asksaveasfilename(
-        filetypes=(
-            ('Textfile', '*.txt'),
+        filetypes =(
+            ('Textfiler', '*.txt'),
             ('html-filer', '*.html'),
             ('Alla filer', '*.*')
         ),
-        defaultextension=".txt",
+        defaultextension = ".txt",
     )
     if filnamn:
-        nuvarandefil = filnamn
-        savefile()
+            nuvarandefil = filnamn
+            savefile()
+
+root = tk.Tk()
+root.title('Nootepad')
+root.geometry('800x500')
+root.resizable(False, False)
+
+textruta = ScrolledText(
+    root,
+    wrap = tk.WORD,
+    font = ("Times New Roman", 15),
+    undo = True
+)
+
+textruta.pack()
 
 main_menu = tk.Menu()
 root.config(menu=main_menu)
-file_menu = tk.Menu(main_menu, tearoff=False)
-main_menu.add_cascade(label='File', menu=file_menu)
+file_menu = tk.Menu(main_menu, tearoff = False)
+main_menu.add_cascade(label='File', menu = file_menu)
 
-file_menu.add_command(label='New')
-file_menu.add_command(label='Open')
-file_menu.add_command(label='Save')
-file_menu.add_command(label='Save As')
+file_menu.add_command(label='New', command = new_file)
+file_menu.add_command(label='Open', command = open_file)
+file_menu.add_command(label='Save', command = savefile)
+file_menu.add_command(label='Save As', command = saveas)
 file_menu.add_command(label='Exit', command=root.destroy)
 
 root.mainloop()
